@@ -79,8 +79,13 @@ class _PomodoroCountdownViewState extends State<PomodoroCountdownView> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               const SizedBox(width: 20),
-                              Text(value[0].toString(),
-                                  style: Theme.of(context).textTheme.headline3),
+                              Text(
+                                value[0].toString(),
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .headline3!
+                                    .copyWith(fontWeight: FontWeight.bold),
+                              ),
                               Text(
                                 '\'${value[1].toString()}',
                                 style: descStyle,
